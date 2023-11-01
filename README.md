@@ -13,7 +13,7 @@ Image Gallery
 Getting Started
 Clone this repository to your local machine.
 
-git clone https://github.com/your-username/image-gallery-app.git
+git clone https://github.com/Polinasateesh/ImageGalleryApp.git
 Navigate to the project directory.
 cd image-gallery-app
 Install the required dependencies.
