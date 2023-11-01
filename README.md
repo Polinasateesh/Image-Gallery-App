@@ -1,8 +1,42 @@
-# React + Vite
+Image Gallery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React-based Image Gallery App that allows you to view, select, and delete multiple images. You can also display a toast message to confirm the deletion of selected images. The app uses React, Bootstrap, and React-Toastify.
 
-Currently, two official plugins are available:
+Features:
+Display a grid of images.
+Select multiple images using checkboxes.
+Delete selected images.
+Display toast messages to confirm actions.
+Screenshots
+Image Gallery
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Getting Started
+Clone this repository to your local machine.
+
+git clone https://github.com/your-username/image-gallery-app.git
+Navigate to the project directory.
+cd image-gallery-app
+Install the required dependencies.
+npm install
+
+Start the development server.
+npm start
+Open your web browser and visit http://localhost:5173/ to view the Image Gallery App.
+
+Usage
+To select an image, click on the checkbox or the image itself. Selected images will appear dull.
+To delete selected images, click the "Delete Files" button. A toast message will confirm the deletion.
+You can also use the "Select All" checkbox to select all images.
+Technologies Used
+React
+Bootstrap
+React-Toastify
+
+Acknowledgments
+Thanks to the React and Bootstrap communities for their amazing libraries.
+Toast notifications by React-Toastify.
+
+
+
+
+
