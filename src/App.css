@@ -8,6 +8,7 @@
   border: 1px solid;
   cursor: pointer;
   
+  
 }
 .image-container:hover{
   background-color: rgb(191, 199, 207);
@@ -28,5 +29,8 @@
   font-weight: 600;
 }
 
-
-
+/* .size{
+  height: 300px;
+  width: 300px;
+}
+ */

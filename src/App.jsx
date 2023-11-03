@@ -73,10 +73,7 @@ const App = () => {
     }
   }
 
-  const obj={
-    name:'sateesh',
-    age:24
-  }
+
 
   return (
     <>
@@ -95,7 +92,7 @@ const App = () => {
         <Row>
           {images.map((eachImage, index) => (
             <Col xs={12} md={6} lg={4} xl={3} key={eachImage.id}>
-              <div className={`image-container  ${eachImage.isSelected ? 'dull' : ''}`} >
+              <div className={`image-container ${index===0?"size":""} ${eachImage.isSelected ? 'dull' : ''}`} >
                 <input
                   type="checkbox"
                   onChange={() => toggleSelect(eachImage.id)}
@@ -107,6 +104,7 @@ const App = () => {
                   onClick={() => toggleSelect(eachImage.id)}
                   width={"100%"}
                   alt={eachImage.url}
+
                 />
               </div>
             </Col>
