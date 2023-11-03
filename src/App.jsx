@@ -47,14 +47,13 @@ const App = () => {
     setImages(updatedImages);
 
     // Count the selected images
-    const filteredImages = updatedImages.filter((eachImageSelection) => (eachImageSelection.isSelected === true))
+    const filteredImages = updatedImages.filter((eachImageSelection) => eachImageSelection.isSelected)
     setSelectedImagesCount(filteredImages.length)
   };
 
   // Function to delete selected images
   const deleteSelected = () => {
     if(selectedImagesCount > 0){
-
       // Display a success toast with the count of deleted files
       toast.success(`${selectedImagesCount} ${selectedImagesCount > 1 ? "Files" : "File"} Deleted Successfully`, {
         position: toast.POSITION.TOP_RIGHT,
@@ -65,45 +64,44 @@ const App = () => {
       const updatedImages = images.filter((img) => !img.isSelected);
       setImages(updatedImages);
       setSelectedImagesCount(0)
- 
-    }else{
+    } else {
       // Display an error toast when no files are selected
       toast.error(' No Files are Selected', {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 700,
       })
-
     }
+  }
+
+  const obj={
+    name:'sateesh',
+    age:24
   }
 
   return (
     <>
      <ToastContainer />
-      <div className="d-flex justify-content-between align-items-center m-1 ">
+      <div className="d-flex justify-content-between align-items-center m-1">
         <div>
-          {/* Checkbox to select all images */}
           <input type="checkbox" className="input-checkbox" style={{ transform: "scale(1.2)" }} checked={selectedImagesCount > 0 ? true : false}/>{" "}
           <label className="label">{selectedImagesCount}{" "}{selectedImagesCount > 1 ? "Files Selected" : "File selected"}</label>
         </div>
         <div>
-          {/* Button to delete selected images */}
           <Button variant="outline-danger" className="__button" onClick={deleteSelected}>Delete Files</Button>
         </div>
       </div>
       <hr/>
       <Container fluid>
         <Row>
-          {images.map((eachImage) => (
+          {images.map((eachImage, index) => (
             <Col xs={12} md={6} lg={4} xl={3} key={eachImage.id}>
-              <div className={`image-container ${eachImage.isSelected ? 'dull' : ''}`}>
-                {/* Checkbox for each image */}
+              <div className={`image-container  ${eachImage.isSelected ? 'dull' : ''}`} >
                 <input
                   type="checkbox"
                   onChange={() => toggleSelect(eachImage.id)}
                   checked={eachImage.isSelected}
                   style={{ transform: "scale(1.2)" }}
                 />
-                {/* Image */}
                 <Image
                   src={eachImage.url}
                   onClick={() => toggleSelect(eachImage.id)}
