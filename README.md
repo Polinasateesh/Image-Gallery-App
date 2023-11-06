@@ -7,8 +7,8 @@ Display a grid of images.
 Select multiple images using checkboxes.
 Delete selected images.
 Display toast messages to confirm actions.
-Screenshots
-Image Gallery
+drag and Drop for reordering
+responsive layout
 
 Getting Started
 Clone this repository to your local machine.
