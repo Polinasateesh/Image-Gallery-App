@@ -6,9 +6,7 @@
   padding: 10px;
   border-radius: 15px;
   border: 1px solid;
-  cursor: pointer;
-  
-  
+  cursor: pointer; 
 }
 .image-container:hover{
   background-color: rgb(191, 199, 207);
@@ -29,8 +27,16 @@
   font-weight: 600;
 }
 
-/* .size{
-  height: 300px;
-  width: 300px;
+.add-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed;
+  height: 295px;
 }
- */
+.add-displayNone{
+  display: none;
+}
+
+
